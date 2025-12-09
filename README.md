@@ -1,4 +1,4 @@
-##  SmartHouse – Application Smart Home (Spring Boot + Angular + Docker)
+###  SmartHouse – Application Smart Home (Spring Boot + Angular + Docker)
 **Description du projet**
 
 **SmartHouse est une application complète de gestion de maison intelligente (Smart Home).**
@@ -50,4 +50,5 @@ smarthouse/
 | Orchestration   | Docker & Docker Compose                                    |
 | Build Backend   | Maven                                                      |
 | Build Frontend  | Node / Angular CLI                                         |
+
 
