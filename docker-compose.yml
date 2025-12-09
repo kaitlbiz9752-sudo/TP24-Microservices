@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-smart-house
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: smart-house
+    ports:
+      - "3307:3306"                    # hôte 3307 -> conteneur 3306 (évite le conflit avec Wamp)
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./Smart_Home_back
+    container_name: backend-smart-house
+    ports:
+      - "8085:8085"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/smart-house
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./smartHome-front
+    container_name: frontend-smart-house
+    ports:
+      - "8080:80"                      # hôte 8080 -> Nginx 80 (évite le conflit avec Wamp/Apache)
+    depends_on:
+      backend:
+        condition: service_started
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-smart-house
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306                   # port interne du service mysql (ne pas mettre 3307 ici)
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8082:80"                      # accès à phpMyAdmin depuis l'hôte
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
