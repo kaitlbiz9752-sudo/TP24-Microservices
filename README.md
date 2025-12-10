@@ -198,7 +198,7 @@ docker compose build
 | **Frontend Angular**    | [http://localhost:8080](http://localhost:8080) |
 | **Backend Spring Boot** | [http://localhost:8085](http://localhost:8085) |
 | **phpMyAdmin**          | [http://localhost:8082](http://localhost:8082) |
-| **MySQL (local)**       | hôte : `localhost`, port : `3307`              |
+| **MySQL (local)**       | hôte : `localhost`, port : `3306`              |
 
 
 
@@ -238,6 +238,7 @@ https://github.com/user-attachments/assets/72555909-12b9-47ce-94cd-8b9ab1b3e273
 **Projet réalisé par Kaoutar AITLBIZ**
 **Encadré dans le cadre des projets Microservices & SmartHome.**
 **Docker, Spring Boot, Angular, MySQL.**
+
 
 
 
