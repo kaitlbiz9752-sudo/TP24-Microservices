@@ -236,8 +236,22 @@ https://github.com/user-attachments/assets/72555909-12b9-47ce-94cd-8b9ab1b3e273
 ## Auteur
 
 **Projet réalisé par Kaoutar AITLBIZ**
+
+
+
+
+
 **Encadré dans le cadre des projets Microservices & SmartHome.**
+
+
+
+
+
+
+
+
 **Docker, Spring Boot, Angular, MySQL.**
+
 
 
 
