@@ -71,6 +71,7 @@ EXPOSE 8085
 ENTRYPOINT ["java","-jar","app.jar"]
 ```
 
+<img width="779" height="514" alt="image" src="https://github.com/user-attachments/assets/daf58fa6-fa90-4c37-bdec-6854243e7a57" />
 
 **2. Dockerfile Frontend (Angular)**
 
@@ -160,7 +161,10 @@ volumes:
   mysql_data:
 ```
 
+<img width="1600" height="842" alt="image" src="https://github.com/user-attachments/assets/3346bae5-bcfc-4bd6-be49-d531e99a4b46" />
 
+<img width="1426" height="266" alt="image" src="https://github.com/user-attachments/assets/964741c5-9912-45d8-809b-a877311eab0b" />
+<img width="1600" height="263" alt="image" src="https://github.com/user-attachments/assets/869ad7f0-41fb-4cad-9472-2ba374736618" />
 
 
 ## Lancement du projet
@@ -172,7 +176,7 @@ volumes:
  ```text
 docker compose up -d
 ```
-
+<img width="1600" height="759" alt="image" src="https://github.com/user-attachments/assets/f659e070-4532-4eb0-ad92-759f1188f6b5" />
 **2. Arrêter et nettoyer**
 
 
@@ -224,9 +228,15 @@ docker compose build
 - **Cliquer Save**
 
 
+
+https://github.com/user-attachments/assets/72555909-12b9-47ce-94cd-8b9ab1b3e273
+
+
+
 ## Auteur
 
 **Projet réalisé par Kaoutar AITLBIZ**
 **Encadré dans le cadre des projets Microservices & SmartHome.**
 **Docker, Spring Boot, Angular, MySQL.**
+
 
