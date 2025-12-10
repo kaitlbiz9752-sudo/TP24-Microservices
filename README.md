@@ -89,7 +89,7 @@ COPY --from=builder /app/dist/smart-home /usr/share/nginx/html
 EXPOSE 80
 ```
 
-
+<img width="1600" height="759" alt="image" src="https://github.com/user-attachments/assets/f659e070-4532-4eb0-ad92-759f1188f6b5" />
 
 ## docker-compose.yml
 
@@ -176,7 +176,7 @@ volumes:
  ```text
 docker compose up -d
 ```
-<img width="1600" height="759" alt="image" src="https://github.com/user-attachments/assets/f659e070-4532-4eb0-ad92-759f1188f6b5" />
+
 **2. Arrêter et nettoyer**
 
 
@@ -238,5 +238,6 @@ https://github.com/user-attachments/assets/72555909-12b9-47ce-94cd-8b9ab1b3e273
 **Projet réalisé par Kaoutar AITLBIZ**
 **Encadré dans le cadre des projets Microservices & SmartHome.**
 **Docker, Spring Boot, Angular, MySQL.**
+
 
 
